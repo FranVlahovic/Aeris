@@ -1,15 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+    font-family: logoFont;
+    src: url(assets/fonts/Neuropol.otf);
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', serif;
 }
   
 :root {
 --primary-color: --secondary-color: ;
 }
+
   
 img {
 max-width: 100%;
 display: block;
 height: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', serif;
+}
+  
+:root {
+--primary-color: rgb(24, 24, 24);
+--secondary-color: rgb(235, 235, 240);
+--secondary-darker: rgb(229, 229, 234);
+--placeholder-color: rgb(142, 142, 147);
+--searchbar-bg: rgb(44, 44, 46);
+}
+
+  
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.logo h1 {
+    font-family: logoFont;
+    font-weight: 400;
+    font-size: 1.75em;
+    color: var(--secondary-darker);
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+#header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2.5em;
+}
+
+.search-bar {
+    display: flex;
+    border-radius: 2em;
+    padding: 0.6em 1em;
+    width: 20%;
+    background-color: var(--searchbar-bg);
+    gap: 0.5em;
+}
+.search-bar input {
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    color: var(--secondary-darker);
+}
+.search-bar input::placeholder {
+    color: var(--placeholder-color);
+}
+.search-bar input:focus {
+    outline: none;
+}
+.search-bar img {
+    filter: brightness(0) saturate(100%) invert(66%) sepia(3%) saturate(393%) hue-rotate(202deg) brightness(85%) contrast(85%);
+    width: 1.5rem;
+}
+
+.dev-info button {
+    width: 2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(97%) sepia(5%) saturate(407%) hue-rotate(195deg) brightness(93%) contrast(97%);
 }
