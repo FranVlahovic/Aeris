@@ -10,10 +10,6 @@
     box-sizing: border-box;
     font-family: 'Inter', serif;
 }
-  
-:root {
---primary-color: --secondary-color: ;
-}
 
   
 img {
@@ -30,11 +26,12 @@ height: auto;
 }
   
 :root {
---primary-color: rgb(24, 24, 24);
---secondary-color: rgb(235, 235, 240);
---secondary-darker: rgb(229, 229, 234);
---placeholder-color: rgb(142, 142, 147);
---searchbar-bg: rgb(44, 44, 46);
+    --primary-color: rgb(24, 24, 24);
+    --secondary-color: rgb(235, 235, 240);
+    --secondary-darker: rgb(229, 229, 234);
+    --placeholder-color: rgb(142, 142, 147);
+    --searchbar-bg: rgb(44, 44, 46);
+    --card-color: #1f1f1f;
 }
 
   
@@ -55,6 +52,7 @@ body {
     background-color: var(--primary-color);
 }
 
+/* Header */
 #header {
     display: flex;
     width: 100%;
@@ -94,4 +92,78 @@ body {
     border: none;
     cursor: pointer;
     filter: brightness(0) saturate(100%) invert(97%) sepia(5%) saturate(407%) hue-rotate(195deg) brightness(93%) contrast(97%);
+}
+
+/* Main */
+#main {
+    display: grid;
+    grid-template-areas: 
+    "today hour hour hour"
+    "week highlights highlights highlights";
+    padding: 1em 2.5em;
+    gap: 1.5em;
+}
+
+.current-container {
+    grid-area: today;
+    background-color: var(--card-color);
+    color: var(--secondary-color);
+    border-radius: 2em;
+    padding: 1em;
+}
+
+.hourly-container {
+    grid-area: hour;
+    background-color: var(--searchbar-bg);
+    border-radius: 1.5em;
+    padding: 1em;
+}
+
+.weekly-container {
+    grid-area: week;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    
+}
+
+.highlight-container {
+    grid-area: highlights;
+}
+
+.weekly-container h3, .highlight-container h3 {
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.cards-container {
+    background-color: var(--card-color);
+    border-radius: 1em;
+    padding: 1em;
+}
+
+/* Hourly */
+.hour-card {
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.hour-card img {
+    width: 2em;
+    filter: brightness(0) saturate(100%) invert(66%) sepia(3%) saturate(393%) hue-rotate(202deg) brightness(85%) contrast(85%);
+}
+
+/* Weekly */
+.weather-week {
+    background-color: var(--card-color);
+    border-radius: 2em;
+    padding: 1em;
+}
+.week-day {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

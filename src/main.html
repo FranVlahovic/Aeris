@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bura</title>
+    <title>Bura Weather</title>
     <link rel="icon" href="/weather.svg" type="image/x-icon">
     <link rel="shortcut icon" href="/weather.svg" type="image/x-icon" sizes="48x48">
 </head>
@@ -23,6 +23,64 @@
             </button>
         </div> 
     </header>
-    
+    <main id="main">
+        <div class="current-container">
+            <div class="curr-weather-city">
+                <img src="assets/icons/weather-icons/cloudy-night-3.svg" alt="Blank">
+                <div class="curr-city-temp">
+                    <h2>Opatija</h2>
+                    <h2>25°C</h2>
+                </div>
+            </div>
+            <div class="curr-weather">
+                <p>Partly Sunny</p>
+            </div>
+            <div class="curr-line"></div>
+            <div class="curr-date">
+                <p>1 January, 2025</p>
+                <p>5:01 AM</p>
+            </div>
+        </div>
+
+        <div class="hourly-container">
+            <div class="cards-container">
+                <div class="hour-card">
+                    <div class="hour-temp-time">
+                        <h2>25°C</h2>
+                        <h2>0:00</h2>
+                    </div>
+                    <div class="hour-weather">
+                        <p>Partly Sunny</p>
+                    </div>
+                    <div class="humid-wind">
+                        <div class="humidity">
+                            <img src="assets/icons/water-outline.svg" alt="Humidity Icon">
+                            <p>3%</p>
+                        </div>
+                        <div class="wind">
+                            <img src="assets/icons/weather-icons/wind.svg" alt="Wind Status Icon">
+                            <p>60km/h</p>
+                        </div>    
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+        <div class="weekly-container">
+            <h3 class="container-heading">7 days Forecast</h3>
+            <div class="weather-week">
+                <div class="week-day">
+                    <img src="assets/icons/weather-icons/rainy-1.svg" alt="Weather Icon">
+                    <h2>+29°/+18</h2>
+                    <p>3 January</p>
+                    <p>Monday</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-container">
+            <h3 class="container-heading">Today's Highlight</h3>
+        </div>
+    </main>
 </body>
 </html>
