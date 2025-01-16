@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bura Weather</title>
+    <title>Aeris Weather</title>
     <link rel="icon" href="/weather.svg" type="image/x-icon">
     <link rel="shortcut icon" href="/weather.svg" type="image/x-icon" sizes="48x48">
 </head>
@@ -11,33 +11,85 @@
 <body>
     <header id="header">
         <div class="logo">
-            <h1>Bura</h1>
+            <h1>Aeris</h1>
         </div>
-        <div class="search-bar">
-            <img src="assets/icons/magnify.svg" alt="Search Icon">
-            <input type="text" placeholder="Search for a city">
+        <div class="search-info">
+            <div class="search-bar">
+                <input style="display: none" type="text" placeholder="Search for a city">
+                <img src="assets/icons/magnify.svg" alt="Search Icon">
+            </div>
+            <div class="dev-info">
+                <button aria-label="More information about the app" id="info-button">
+                    <img src="assets/icons/information-outline.svg" alt="Info Icon">
+                </button>
+            </div>     
         </div>
-        <div class="dev-info">
-            <button aria-label="More information about the app" id="info-button">
-                <img src="assets/icons/information-outline.svg" alt="">
-            </button>
-        </div> 
     </header>
+
     <main id="main">
-        <div class="current-container">
-            <div class="curr-weather-city">
-                <img src="assets/icons/weather-icons/cloudy-day-1.svg" alt="Blank">
-                <div class="curr-city-temp">
-                    <h2>Opatija</h2>
-                    <h2>25°C</h2>
+        <div class="current-weather">
+            <div class="current-container">
+                
+                <div class="curr-date-city">
+                    <div class="curr-weather">
+                        <h2>Opatija</h2>
+                    </div>
+                    <div class="curr-city">
+                        <h3>Partly Sunny</h3>
+                        <div class="curr-city-temp">
+                            <h2>25°C</h2>
+                        </div>
+                    </div>
+                    <div class="curr-date">
+                        <p>Weather Forecast on 1 January, 2025</p>
+                    </div>
+                    
                 </div>
+
+                <img src="assets/icons/weather-icons/cloudy-day-1.svg" alt="Blank">
             </div>
-            <div class="curr-weather">
-                <p>Partly Sunny</p>
-            </div>
-            <div class="curr-line"></div>
-            <div class="curr-date">
-                <p>1 January, 2025</p>
+    
+            <div class="highlight-cards">
+                <div class="wind-status">
+                    <img src="assets/icons/highlight-icons/windsock.svg" alt="">
+                    <div class="heading-value">
+                        <h3>Wind Status</h3>
+                        <p>7.90 km/h</p>
+                    </div>
+                </div>
+
+                <div class="uv-index">
+                    <img src="assets/icons/highlight-icons/white-balance-sunny.svg" alt="">
+                    <div class="heading-value">
+                        <h3>UV Index</h3>
+                        <p>2</p>
+                    </div>
+                </div>
+
+                <div class="humid">
+                    <img src="assets/icons/highlight-icons/water-outline.svg" alt="">
+                    <div class="heading-value">
+                        <h3>Humidity</h3>
+                        <p>84%</p>
+                    </div>
+                </div>
+
+                <div class="visibility">
+                    <img src="assets/icons/highlight-icons/eye-outline.svg" alt="">
+                    <div class="heading-value">
+                        <h3>Visibility</h3>
+                        <p>03 km</p>
+                    </div>
+                </div>
+
+                <div class="feels-like">
+                    <img src="assets/icons/highlight-icons/thermometer.svg" alt="">
+                    <div class="icon-and-heading">
+                        <h3>Feels Like</h3>
+                        <p>25°</p>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -47,7 +99,7 @@
                     <img src="assets/icons/weather-icons/rainy-1.svg" alt="Weather Icon">
                     <div class="temp-time">
                         <h2>25°C</h2>
-                        <h2>0:00</h2>
+                        <h3>0:00</h3>
                     </div>
                 </div>
                 <div class="hour-weather">
@@ -66,66 +118,6 @@
             </div>
         </div>
 
-
-        <div class="weekly-container">
-            <h3 class="container-heading">7 days Forecast</h3>
-            <div class="weather-week">
-                <div class="week-day">
-                    <img src="assets/icons/weather-icons/rainy-1.svg" alt="Weather Icon">
-                    <h2>+29°/+18</h2>
-                    <p>3 January</p>
-                    <p>Monday</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="highlight-container">
-            <h3 class="container-heading">Today's Highlight</h3>
-            <div class="highlight-cards">
-                <div class="wind-status">
-                    <div class="icon-and-heading">
-                        <img src="assets/icons/highlight-icons/windsock.svg" alt="">
-                        <h3>Wind Status</h3>
-                    </div>
-                    <p>7.90 km/h</p>
-                </div>
-                <div class="uv-index">
-                    <div class="icon-and-heading">
-                        <img src="assets/icons/highlight-icons/white-balance-sunny.svg" alt="">
-                        <h3>UV Index</h3>
-                    </div>
-                    <p>2</p>
-                </div>
-                <div class="pressure">
-                    <div class="icon-and-heading">
-                        <img src="assets/icons/highlight-icons/gauge.svg" alt="">
-                        <h3>Pressure</h3>
-                    </div>
-                    <p>1001.0 mb</p>
-                </div>
-                <div class="humidity">
-                    <div class="icon-and-heading">
-                        <img src="assets/icons/highlight-icons/water-outline.svg" alt="">
-                        <h3>Humidity</h3>
-                    </div>
-                    <p>84%</p>
-                </div>
-                <div class="visibility">
-                    <div class="icon-and-heading">
-                        <img src="assets/icons/highlight-icons/eye-outline.svg" alt="">
-                        <h3>Visibility</h3>
-                    </div>
-                    <p>03 km</p>
-                </div>
-                <div class="feels-like">
-                    <div class="icon-and-heading">
-                        <img src="assets/icons/highlight-icons/thermometer.svg" alt="">
-                        <h3>Feels Like</h3>
-                    </div>
-                    <p>25°</p>
-                </div>
-            </div>
-        </div>
     </main>
 </body>
 </html>

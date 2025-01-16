@@ -30,9 +30,8 @@ height: auto;
     --secondary-color: rgb(235, 235, 240);
     --secondary-darker: rgb(229, 229, 234);
     --placeholder-color: rgb(142, 142, 147);
-    --searchbar-bg: rgb(44, 44, 46);
-    --card-color: #1f1f1f;
-    --icon-color: brightness(0) saturate(100%) invert(66%) sepia(3%) saturate(393%) hue-rotate(202deg) brightness(85%) contrast(85%);
+    --card-color: rgba(15, 15, 15, 0.35);
+    --icon-color: brightness(0) saturate(100%) invert(97%) sepia(5%) saturate(407%) hue-rotate(195deg) brightness(93%) contrast(97%);
 
 }
 
@@ -52,6 +51,7 @@ img {
 
 body {
     background-color: var(--primary-color);
+    background-image: url(assets/images/weatherbg.jpg);
 }
 
 /* Header */
@@ -62,30 +62,29 @@ body {
     align-items: center;
     padding: 1em 2.5em;
 }
-
+.search-info {
+    display: flex;
+    gap: 1em;
+}
 .search-bar {
     display: flex;
-    border-radius: 2em;
-    padding: 0.6em 1em;
-    width: 20%;
-    background-color: var(--searchbar-bg);
-    gap: 0.5em;
+    cursor: pointer;
 }
 .search-bar input {
     background-color: transparent;
     border: none;
-    font-size: 1em;
+    font-size: 1.2em;
     color: var(--secondary-darker);
 }
 .search-bar input::placeholder {
-    color: var(--placeholder-color);
+    color: var(--secondary-color);
 }
 .search-bar input:focus {
     outline: none;
 }
 .search-bar img {
-    filter: brightness(0) saturate(100%) invert(66%) sepia(3%) saturate(393%) hue-rotate(202deg) brightness(85%) contrast(85%);
-    width: 1.5rem;
+    filter: invert(1);
+    width: 2rem;
 }
 
 .dev-info button {
@@ -93,34 +92,29 @@ body {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    filter: brightness(0) saturate(100%) invert(97%) sepia(5%) saturate(407%) hue-rotate(195deg) brightness(93%) contrast(97%);
+    filter: var(--icon-color);
 }
 
 /* Main */
 #main {
-    display: grid;
-    grid-template-areas: 
-    "today hour hour hour"
-    "week week week highlights";
-    padding: 1em 2.5em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 5em;
     gap: 1.5em;
 }
 
-.current-container {
-    grid-area: today;
-    width: 70%;
-    background-color: var(--card-color);
-    color: var(--secondary-color);
-    border-radius: 1.5em;
-    padding: 1.5em;
+.current-weather {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
 }
 
+.current-container {
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+}
 
 .cards-container {
-    grid-area: hour;
     border-radius: 1.5em;
     padding: 1em;
     display: flex;
@@ -128,43 +122,69 @@ body {
     justify-content: space-between;
 }
 
-.weekly-container {
-    grid-area: week;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5em;
-    
-}
-
-.highlight-container {
-    grid-area: highlights;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5em;
-}
-
-.weekly-container h3, .highlight-container h3 {
-    color: var(--secondary-color);
-    font-weight: 500;
-    font-size: 1.1em;
-}
-
 /* Current */
-.curr-weather-city {
+.curr-date-city {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 2em;
+    flex-direction: column;
 }
-.curr-weather-city img {
+.curr-date-city h2 {
+    font-size: 4em;
+    font-weight: 200;
+}
+.curr-date-city h3 {
+    font-size: 1.7em;
+    font-weight: 300;
+}
+.curr-date-city p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+.curr-city-temp h2 {
+    font-size: 4em;
+    font-weight: 700;
+}
+.current-container img {
     width: 10rem;
 }
+.curr-date {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+/* Highlight */
+.highlight-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.wind-status, .uv-index, .pressure, .humid, .visibility, .feels-like {
+    display: flex;
+    gap:1em;
+}
+
+.highlight-cards p {
+    color: var(--secondary-color);
+    font-size: 2em;
+    font-weight: 300;
+}
+.highlight-cards h3 {
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+.highlight-cards img {
+    width: 3em;
+    filter: var(--icon-color);
+}
+
 
 /* Hourly */
 .hour-card {
     color: var(--secondary-color);
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2em;
 }
 .humid-wind {
@@ -187,6 +207,18 @@ body {
     flex-direction: column;
     gap: 1em;
 }
+.temp-time h2 {
+    font-weight: 300;
+    font-size: 2.5em;
+}
+.temp-time h3 {
+    font-weight: 300;
+    font-size: 1.8em;
+}
+.hour-weather p {
+    font-weight: 200;
+    font-size: 1.2em;
+}
 .hour-temp-time {
     display: flex;
     flex-direction: column;
@@ -207,38 +239,4 @@ body {
 }
 .week-day p, .humid-wind p {
     color: var(--placeholder-color);
-}
-
-/* Highlight */
-.highlight-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    background-color: var(--card-color);
-    border-radius: 1.5em;
-    padding: 1.5em;
-}
-
-.wind-status, .uv-index, .pressure, .humidity, .visibility, .feels-like {
-    display: flex;
-    justify-content: space-between;
-}
-.highlight-cards p {
-    color: var(--secondary-color);
-    font-weight: 500;
-}
-.highlight-cards h3 {
-    color: var(--placeholder-color);
-    font-weight: 400;
-}
-
-.icon-and-heading {
-    display: flex;
-    align-items: center;
-    gap: 0.7em;
-    
-}
-.icon-and-heading img {
-    width: 2em;
-    filter: var(--icon-color);
 }
