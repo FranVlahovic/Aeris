@@ -28,11 +28,10 @@ height: auto;
 :root {
     --primary-color: rgb(24, 24, 24);
     --secondary-color: rgb(235, 235, 240);
-    --secondary-darker: rgb(229, 229, 234);
-    --placeholder-color: rgb(142, 142, 147);
-    --card-color: rgba(15, 15, 15, 0.35);
+    --secondary-darker: rgb(212, 212, 212);
+    --placeholder-color: rgb(119, 119, 121);
     --icon-color: brightness(0) saturate(100%) invert(97%) sepia(5%) saturate(407%) hue-rotate(195deg) brightness(93%) contrast(97%);
-
+    --social-icons: brightness(0) saturate(100%) invert(34%) sepia(90%) saturate(3399%) hue-rotate(179deg) brightness(92%) contrast(97%);
 }
 
   
@@ -46,7 +45,7 @@ img {
     font-family: logoFont;
     font-weight: 400;
     font-size: 1.75em;
-    color: var(--secondary-darker);
+    color: var(--secondary-color);
 }
 
 body {
@@ -108,6 +107,71 @@ body {
     cursor: pointer;
     filter: var(--icon-color);
 }
+.dev-info {
+    position: relative;
+}
+
+/* Dropdown */
+.profile-popup {
+    position: absolute;
+    right: -1em;
+    display: none;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--secondary-color);
+    padding: 1.2em;
+    border-radius: 1em;
+    z-index: 1000;
+    width: 20rem;
+}
+.photo-name img {
+    width: 4rem;
+    border-radius: 2em;
+    border: 3px solid rgb(4, 129, 187);
+}
+.photo-name {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--secondary-darker);
+    padding-bottom: 1em;
+    gap: 1em;
+}
+.photo-name h2 {
+    color: rgb(4, 129, 187);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.photo-name span {
+    color: var(--placeholder-color);
+}
+
+.popup-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5em;
+}
+.popup-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 1.2em;
+    gap: 0.7em;
+}
+.popup-links img {
+    width: 1.7em;
+    filter: var(--social-icons);
+}
+.popup-copied {
+    display: none;
+    color: rgb(4, 129, 187);
+    font-weight: 600;
+    padding-top: 0.5em;
+    justify-self: center;
+}
+
 
 /* Main */
 #main {

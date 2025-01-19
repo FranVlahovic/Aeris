@@ -11,6 +11,7 @@ const openSearchbar = () => {
 const closeSearchbar = () => {
     searchInput.style.display = 'none';
     searchbar.classList.remove('search-open');
+    searchInput.value = '';
 };
 
 export const toggleSearchbar = () => {
@@ -25,14 +26,12 @@ export const toggleSearchbar = () => {
     document.addEventListener('click', (e) => {
         if (!searchbar.contains(e.target)) {
             closeSearchbar();
-            searchInput.value = '';
         }
     });
 
     searchbar.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' || e.key === 'Enter') {
             closeSearchbar();
-            searchInput.value = '';
         }
     });
 };
