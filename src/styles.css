@@ -191,6 +191,7 @@ body {
     color: var(--secondary-color);
     display: flex;
     flex-direction: column;
+    width: 25rem;
 }
 
 .cards-container {

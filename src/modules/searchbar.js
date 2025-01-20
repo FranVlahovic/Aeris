@@ -1,3 +1,5 @@
+import { fetchAndDisplayWeather } from '../index.js';
+
 const searchbar = document.querySelector('.search-bar');
 const searchBtn = document.getElementById('search-btn');
 const searchInput = document.getElementById('search-input');
@@ -30,8 +32,16 @@ export const toggleSearchbar = () => {
     });
 
     searchbar.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' || e.key === 'Enter') {
+        if (e.key === 'Escape') {
             closeSearchbar();
+        } else if (e.key === 'Enter') {
+            const location = searchInput.value.trim();
+            if (location) {
+                fetchAndDisplayWeather(location);
+                closeSearchbar();
+            } else {
+                console.log('Please enter a location');
+            }
         }
     });
 };
