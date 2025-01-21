@@ -51,6 +51,7 @@ img {
 body {
     background-color: var(--primary-color);
     background-image: url(assets/images/weatherbg.jpg);
+    
 }
 
 /* Header */
@@ -179,7 +180,9 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 1em 5em;
+    padding-bottom: 3em;
     gap: 16em;
+    height: 100vh;
 }
 
 .current-weather {
@@ -191,7 +194,7 @@ body {
     color: var(--secondary-color);
     display: flex;
     flex-direction: column;
-    width: 25rem;
+    width: 30rem;
 }
 
 .cards-container {

@@ -1,14 +1,15 @@
 import './styles.css';
 import { toggleSearchbar } from './modules/searchbar';
 import { toggleInfoPopup, copyEmailListener } from './modules/developerInfo';
-import { displayCurrentWeather } from './modules/dom.js';
+import { displayCurrentWeather, displayWeekWeather } from './modules/dom.js';
 import { fetchWeatherData } from './modules/api.js';
 
 export const fetchAndDisplayWeather = (location) => {
     fetchWeatherData(location).then((data) => {
-        if (data && data.days && data.days.length > 0) {
+        if (data && data.days) {
             const todayWeather = data.days[0];
             displayCurrentWeather(data.resolvedAddress, todayWeather);
+            displayWeekWeather(data.days);
         } else {
             console.error('No weather data available');
         }
@@ -18,4 +19,4 @@ export const fetchAndDisplayWeather = (location) => {
 toggleSearchbar();
 toggleInfoPopup();
 copyEmailListener();
-fetchAndDisplayWeather('rijeka');
+fetchAndDisplayWeather('Rijeka');
