@@ -51,7 +51,12 @@ img {
 body {
     background-color: var(--primary-color);
     background-image: url(assets/images/weatherbg.jpg);
+    background-size: cover;
     
+}
+
+button:hover {
+    opacity: 0.85;
 }
 
 /* Header */
@@ -182,7 +187,7 @@ body {
     padding: 1em 5em;
     padding-bottom: 3em;
     gap: 16em;
-    height: 100vh;
+    height: fit-content;
 }
 
 .current-weather {
@@ -264,6 +269,7 @@ body {
     color: var(--secondary-color);
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.7em;
 }
 .week-card img {
@@ -277,7 +283,52 @@ body {
     font-size: 2.5em;
     font-weight: 700;
 }
-.min-temp {
+.min-temp, .hour-wind {
     font-size: 1.2em;
     font-weight: 400;
+}
+
+/* Hourly */
+.hour-card {
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7em;
+}
+.hour-card img {
+    width: 5rem;
+}
+.day-hour h3 {
+    font-size: 1.7em;
+    font-weight: 300;
+}
+
+/* Toggler */
+.weekly-hourly {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.switch-button {
+    display: flex;
+    font-size: 1em;
+    color: var(--secondary-color);
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 2em;
+    cursor: pointer;
+    width: fit-content;
+    
+}
+.hour-div, .week-div {
+    padding: 0.5em 1em;
+}
+
+.toggle-div {
+    background-color: var(--secondary-color);
+    border-radius: 2em;
+    color: #0970BB;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in-out; 
 }

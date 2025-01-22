@@ -97,6 +97,7 @@ export const displayWeekWeather = (days) => {
 
     weekDays.forEach((day) => {
         weeklyCardsContainer.innerHTML += `
+            
             <div class="week-card">
                 <div class="day-week">
                     <h3>${new Date(day.datetime).toLocaleDateString('en-GB', {
@@ -109,6 +110,39 @@ export const displayWeekWeather = (days) => {
                 <div class="temp-min-max">
                     <p class="max-temp">${day.tempmax}°C</p>
                     <p class="min-temp">${day.tempmin}°C</p>
+                </div>
+            </div>
+        `;
+    });
+};
+
+export const displayHourlyWeather = (weather) => {
+    weeklyCardsContainer.innerHTML = '';
+
+    const desiredHours = [
+        '06:00:00',
+        '09:00:00',
+        '12:00:00',
+        '15:00:00',
+        '18:00:00',
+        '21:00:00',
+    ];
+    const hourlyData = weather.hours;
+
+    desiredHours.forEach((time) => {
+        const hourData = hourlyData.find((hour) => hour.datetime === time);
+
+        weeklyCardsContainer.innerHTML += `
+            <div class="hour-card">
+                <div class="day-hour">
+                    <h3>${time.substring(0, 5)}</h3>
+                </div>
+
+                <img src="${icons[hourData.icon]}" alt="Weather Icon">
+                
+                <div class="temp-min-max">
+                    <p class="max-temp">${hourData.temp}°C</p>
+                    <p class="hour-wind">${hourData.windspeed}km/h</p>
                 </div>
             </div>
         `;
