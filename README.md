@@ -13,7 +13,7 @@
 <br />
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/5a12892c-6504-46a2-9d78-f1bf4ee43215" alt="Aeris Gif">
+  <img src="https://github.com/user-attachments/assets/5b8bc367-5cc4-4ade-8e7f-e9c27db12159" alt="Aeris Gif">
 
   <h3 align="center">Aeris</h3>
   
