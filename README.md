@@ -2,18 +2,18 @@
 
 <!-- PROJECT SHIELDS -->
 
-[![Contributors][contributors-shield]][contributors-url]  
-[![Forks][forks-shield]][forks-url]  
-[![Stargazers][stars-shield]][stars-url]  
-[![Issues][issues-shield]][issues-url]  
-[![MIT License][license-shield]][license-url]  
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
 
 <div align="center">
-  <img src="https://github.com/FranVlahovic/Aeris/assets/your-logo-path" alt="Aeris Logo" width="150">
+  <img src="https://github.com/user-attachments/assets/5a12892c-6504-46a2-9d78-f1bf4ee43215" alt="Aeris Gif">
 
   <h3 align="center">Aeris</h3>
   
@@ -42,7 +42,6 @@
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
 - [Usage](#usage)
-- [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -57,9 +56,10 @@
 ## Gallery
 
 <div align="center">  
-  <img src="https://github.com/FranVlahovic/Aeris/assets/image1-path" alt="Image 1" width="300">  
-  <img src="https://github.com/FranVlahovic/Aeris/assets/image2-path" alt="Image 2" width="300">  
-  <img src="https://github.com/FranVlahovic/Aeris/assets/image3-path" alt="Image 3" width="300">  
+  <img src="https://github.com/user-attachments/assets/e7963d71-4e41-4e4b-8bf8-6778409c7291" alt="Image 1" width="400">  
+  <img src="https://github.com/user-attachments/assets/5264b96a-f55b-448c-b6e0-0ab8b44c7814" alt="Image 2" width="400">  
+  <img src="https://github.com/user-attachments/assets/43d5f1a7-cd5b-4b92-aedf-50a0942df8aa" alt="Image 3" width="400">
+  <img src="https://github.com/user-attachments/assets/520b501c-b25e-41cf-91e7-f1de764c727c" alt="Image 3" width="400"> 
 </div>
 
 ---
@@ -133,7 +133,8 @@ Distributed under the MIT License. See `LICENSE.txt` for details.
 
 ## Contact
 
-Fran Vlahovic - [LinkedIn](https://linkedin.com/in/franvlahovic)  
+Fran Vlahovic - [LinkedIn](https://linkedin.com/in/franvlahovic)
+
 Email: franvlahovic@proton.me
 
 Project Link: [https://github.com/FranVlahovic/Aeris](https://github.com/FranVlahovic/Aeris)
