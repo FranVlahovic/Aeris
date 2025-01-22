@@ -32,6 +32,7 @@ export const toggleInfoPopup = () => {
     document.addEventListener('click', (e) => {
         if (!infoBtn.contains(e.target)) {
             closePopup();
+            closeCopiedPopup();
         }
     });
 };
