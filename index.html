@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeris Weather</title>
+    <link rel="icon" href="b2e53053280396bfaa22.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="b2e53053280396bfaa22.svg" type="image/x-icon" sizes="48x48">
+<script defer src="main.js"></script></head>
+
+<body>
+    <header id="header">
+        <div class="logo">
+            <h1>Aeris</h1>
+        </div>
+        <div class="search-info">
+            <div class="search-bar">
+                <input style="display: none;" type="text" id="search-input" placeholder="Search for a city...">
+                <button id="search-btn" aria-label="Open search">
+                    <img src="54ff7732bb1a5ff166c6.svg" alt="Search Icon">
+                </button>
+            </div>
+            <div class="dev-info">
+                <button aria-label="More information about the app" id="info-button">
+                    <img src="c8211ecd492e7628ee23.svg" alt="Info Icon">
+                </button>
+                <div class="profile-popup">
+
+                    <div class="photo-name">
+                        <img src="c7ca36b3b0854c258eb1.jpeg" alt="">
+                        <div class="photo-name-role">
+                            <h2>Fran Vlahović</h2>
+                            <span>FullStack Developer</span>
+                        </div>
+                    </div>
+            
+                    <div class="popup-links">
+                        <a id="email-button"><img src="c7a364af28c1fc7cbb30.svg" alt="Email Icon"></a>
+            
+                        <a href="https://github.com/FranVlahovic" target="_blank"><img src="550985caaa8859d4b95f.svg" alt="Github Icon"></a>
+                
+                        <a href="https://www.linkedin.com/in/franvlahovic/" target="_blank"><img src="eaccfc4b453ff94aff73.svg" alt="Linkedin Icon"></a>
+                    </div>
+
+                    <div class="popup-copied">
+                        <span>Email copied to clipboard!</span>
+                    </div>
+                </div>
+            
+            </div>     
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="current-weather">
+            <div class="current-container">
+            </div>
+    
+            <div class="highlight-cards">
+            </div>
+        </div>
+
+        <div class="weekly-hourly">
+            <button class="switch-button"><div class="week-div toggle-div">Weekly</div><div class="hour-div">Hourly</div></button>    
+
+            <div class="cards-container">
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
